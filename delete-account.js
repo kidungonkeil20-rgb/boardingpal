@@ -1,4 +1,13 @@
 // Logic for delete-account.html (kept external so the page CSP can forbid inline scripts).
+
+// Anti-clickjacking (see the note in delete-account.html): reveal the page
+// only when it is the top-level window; if framed, break out of the frame.
+if (window.top === window.self) {
+  document.getElementById('anti-clickjack')?.remove();
+} else {
+  try { window.top.location = window.self.location.href; } catch { /* stays hidden */ }
+  throw new Error('BoardingPal account deletion must not run inside a frame.');
+}
 // ---- CONFIG: set before publishing ----
 const CONFIG = {
   supabaseUrl: 'https://amlehtkjbbnorborxqev.supabase.co',

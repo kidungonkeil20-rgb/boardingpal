@@ -11,8 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'unsafe-inline'; connect-src https://*.supabase.co; img-src 'self' data:; form-action 'none'; base-uri 'none'; frame-ancestors 'none'">
+        content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'unsafe-inline'; connect-src https://*.supabase.co; img-src 'self' data:; form-action 'none'; base-uri 'none'">
   <title>Delete your BoardingPal account</title>
+  <!-- Anti-clickjacking: GitHub Pages cannot send frame-ancestors/X-Frame-Options
+       headers (and browsers ignore frame-ancestors in a meta tag), so the page
+       stays hidden until delete-account.js confirms it is not inside a frame. -->
+  <style id="anti-clickjack">body { display: none !important; }</style>
   <style>
     :root { --bg: #f4fafe; --card: #ffffff; --ink: #0d2230; --muted: #3e5566; --accent: #01579b; --danger: #b42318; --danger-btn: #b42318; --line: #c9e2f3; }
     @media (prefers-color-scheme: dark) {
