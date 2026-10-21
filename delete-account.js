@@ -12,7 +12,7 @@ if (window.top === window.self) {
 const CONFIG = {
   supabaseUrl: 'https://amlehtkjbbnorborxqev.supabase.co',
   publishableKey: 'sb_publishable_bDzUHO-8mWlfK8AEQc6ddw_kI5Pv9cY',
-  // Must match the developer name shown on the Google Play listing.
+  // Responsible operator (from lib/legal/legal_content.dart).
   developerName: 'Cosner Pagaddut',
   privacyEmail: 'pagaddutcosner10@gmail.com',
   privacyPolicyUrl: 'privacy.html#account-deletion',
